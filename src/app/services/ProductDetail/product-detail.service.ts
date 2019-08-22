@@ -9,7 +9,7 @@ export class ProductDetailService {
 
   apiURL =
     'https://listing-stg.services.teko.vn/api/products/';
-  constructor(private httpClient: HttpClient) {}
+  constructor(private httpClient: HttpClient) { }
   getProductDetail(sku: string): Observable<any> {
     return this.httpClient.get<any>(`${this.apiURL}${sku}`);
   }

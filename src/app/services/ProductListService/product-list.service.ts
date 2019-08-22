@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +8,7 @@ import { map } from 'rxjs/operators';
 export class ProductListService {
   apiURL =
     'https://listing-stg.services.teko.vn/api/search/?channel=pv_showroom&visitorId=&q=&terminal=CP01';
-  constructor(private httpClient: HttpClient) {}
+  constructor(private httpClient: HttpClient) { }
   getProductList(): Observable<any> {
     return this.httpClient.get<any>(`${this.apiURL}`);
   }

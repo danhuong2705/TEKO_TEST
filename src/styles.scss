@@ -9,7 +9,7 @@
 
 body {
   margin: 0;
-  background-color: rgb(238,241,243) !important;
+  background-color: rgb(238, 241, 243) !important;
 }
 
 .container {
@@ -27,7 +27,8 @@ h2 {
   font-size: 20px;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-weight: lighter;
 }
 
@@ -47,17 +48,21 @@ a {
 a:hover {
   opacity: 0.8;
 }
+
 app-top-bar {
   width: 100%;
+
   h1 {
     color: white;
     margin: 0;
   }
 }
-app-product-list{
+
+app-product-list {
   width: 100%;
 }
-app-product-detail{
+
+app-product-detail {
   width: 100%;
 }
 
@@ -67,5 +72,12 @@ Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
 */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

@@ -18,9 +18,9 @@ export class ProductListComponent implements OnInit {
       currentPage: 1,
       itemsPerPage: CONSTANT.PAGE_SIZE,
       totalItems: 0
-      };
+    };
     route.queryParams.subscribe(
-        params => this.configPaging.currentPage = params.page ? params.page : 1 );
+      params => this.configPaging.currentPage = params.page ? params.page : 1);
   }
   ngOnInit() {
     this.getProductList();

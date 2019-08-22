@@ -1,23 +1,26 @@
-@media screen and (min-width: 240px){
-  .container{
+@media screen and (min-width: 240px) {
+  .container {
     margin: 0 auto;
-    .columns{
+
+    .columns {
       padding: 0 !important;
     }
 
-    .backImg:hover{
-      background-color:gray;
+    .backImg:hover {
+      background-color: gray;
     }
-    img{
+
+    img {
       max-width: 100%;
+      &.cart {
+        float: right;
+      }
     }
-    img.cart{
-      float: right;
-    }
-    .detail{
+    .detail {
       text-align: center;
       width: 80%;
-      .name{
+
+      .name {
         color: rgb(38, 40, 41);
         font-size: 13pt;
         line-height: 18pt;
@@ -28,7 +31,8 @@
         white-space: nowrap;
         font-family: SFProText-Semibold;
       }
-      .sellPrice{
+
+      .sellPrice {
         color: rgb(234, 52, 31);
         font-size: 13pt;
         line-height: 19pt;
@@ -41,17 +45,10 @@
   }
 }
 
-@media screen and (min-width: 320px){
+@media screen and (min-width: 320px) {}
 
-}
+@media screen and (min-width: 480px) {}
 
-@media screen and (min-width: 480px){
+@media screen and (min-width: 768px) {}
 
-}
-
-@media screen and (min-width: 768px){
-
-}
-
-@media screen and (min-width: 1024px){
-}
+@media screen and (min-width: 1024px) {}
