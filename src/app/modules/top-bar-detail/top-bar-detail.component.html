@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="backImg col-sm-1 columns" (click)="onClick()">
+    <img src="../../../assets/Images/arrowBackDetail.png"
+      srcset="../../../assets/Images/arrowBackDetail@2x.png 2x,../../../assets/Images/arrowBackDetail@3x.png 3x">
+  </div>
+  <div class="detail col-sm-10 columns">
+    <p class="name" *ngIf="name">{{name}}</p>
+    <p class="sellPrice" *ngIf="sellPrice">{{sellPrice}}</p>
+  </div>
+  <div class="col-sm-1 columns">
+    <img  class="cart" src="../../../assets/Images/cartOutlined.png"
+      srcset="./../../assets/Images/cartOutlined@2x.png 2x, ./../../assets/Images/cartOutlined@3x.png 3x">
+  </div>
+</div>

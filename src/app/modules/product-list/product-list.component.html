@@ -1,0 +1,22 @@
+<app-top-bar></app-top-bar>
+<div (click)="onClick(item.sku)" class="container" *ngFor="let item of productList | paginate: configPaging; trackBy: trackByFn">
+    <div class="left">
+      <img class="productImage" *ngIf="!item?.images || item?.images?.length == 0" src="../../../assets/Images/small.png"
+      srcset="../../../assets/Images/small@2x.png 2x,../../../assets/Images/small@3x.png 3x">
+      <div *ngIf="item?.images">
+          <div *ngFor="let image of item.images">
+          <img class="productImage" *ngIf="image.priority == 1" src="{{image?.url}}">
+         </div>
+        </div>
+    </div>
+
+    <div class="right">
+      <p class="name">{{item?.name}}</p>
+      <p class="sell-price" *ngIf="item?.price?.sellPrice">{{item?.price?.sellPrice}}</p>
+    </div>
+  </div>
+  <div class="text-center">
+    <pagination-controls *ngIf="productList && productList.length > 0" previousLabel=""
+      nextLabel="" (pageChange)="pageChange($event)"></pagination-controls>
+  </div>
+

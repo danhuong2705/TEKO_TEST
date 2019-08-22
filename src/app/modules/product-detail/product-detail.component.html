@@ -1,0 +1,87 @@
+<app-top-bar-detail [name]="productDetail?.name" [sellPrice]="productDetail?.price?.sellPrice"></app-top-bar-detail>
+<div class="container img-slides">
+  <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="imageConfig">
+    <div ngxSlickItem *ngFor="let item of productDetail?.images; trackBy: trackByFn" class="slide">
+      <div class="product-slide text-center">
+        <img class="img-slide" *ngIf="productDetail?.images?.length == 0"
+          src="../../../assets/Images/small.png"
+          srcset="../../../assets/Images/small@2x.png 2x,../../../assets/Images/small@3x.png 3x">
+         <img class="img-slide" src="{{item?.url}}">
+      </div>
+    </div>
+  </ngx-slick-carousel>
+</div>
+<div class="container info">
+  <div class="product-info">
+    <p class="product-name">{{productDetail?.name}}</p>
+    <p class="code"><span class="code-name">Mã SP: </span> <span class="code-number">{{productDetail?.sku}}</span></p>
+    <p class="status" *ngIf="productDetail?.status?.sale">{{productDetail?.status?.sale}}</p>
+    <p class="price-big" *ngIf="productDetail?.price?.sellPrice">{{productDetail?.price?.sellPrice}}</p>
+  </div>
+</div>
+<div class="container tab-group">
+  <mat-tab-group mat-align-tabs="center">
+    <mat-tab label="Mô tả sản phẩm">
+      <ng-template matTabContent>
+        <h1></h1>
+        <p>...</p>
+      </ng-template>
+    </mat-tab>
+    <mat-tab label="Thông số kỹ thuật">
+      <ng-template matTabContent>
+        <table>
+          <tr *ngFor="let item of productDetail?.attributeGroups;let i=index; trackBy: trackByFn">
+            <td [ngClass]="{'even':i%2===0}" class="attName">{{item?.name}}</td>
+            <td [ngClass]="{'even':i%2===0}" class="attValue">{{item?.value}}</td>
+          </tr>
+        </table>
+      </ng-template>
+    </mat-tab>
+    <mat-tab label="So sánh giá">
+      <ng-template matTabContent>
+        <h1></h1>
+        <p>...</p>
+      </ng-template>
+    </mat-tab>
+
+  </mat-tab-group>
+</div>
+<div class="container refer-title">
+  <p>Sản phẩm cùng loại</p>
+</div>
+<div class="container sliders">
+  <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
+    <div ngxSlickItem *ngFor="let item of productList; trackBy: trackByFn" class="slide">
+      <div class="refer-product">
+        <img class="productImage" *ngIf="!item?.images || item?.images?.length == 0"
+          src="../../../assets/Images/small.png"
+          srcset="../../../assets/Images/small@2x.png 2x,../../../assets/Images/small@3x.png 3x">
+        <div *ngIf="item?.images">
+          <div *ngFor="let image of item.images">
+            <img class="productImage" *ngIf="image.priority == 1" src="{{image?.url}}">
+          </div>
+        </div>
+        <p class="product-refer-name">{{item?.name}}</p>
+        <p class="product-refer-price">{{item?.price?.sellPrice}}</p>
+      </div>
+    </div>
+  </ngx-slick-carousel>
+</div>
+<div class="container checkout">
+  <div class="quantity">
+    <img src="../../../assets/Images/addCircle.png" srcset="../../../assets/Images/addCircle@2x.png 2x,
+          ../../../assets/Images/addCircle@3x.png 3x">
+    2
+    <img src="../../../assets/Images/removeCircle.png" srcset="../../../assets/Images/removeCircle@2x.png 2x,
+          ../../../assets/Images/removeCircle@3x.png 3x">
+  </div>
+  <div class="total">
+    <div class="add-cart">
+      <img src="../../../assets/Images/addToCart.png" srcset="../../../assets/Images/addToCart@2x.png 2x,
+              ../../../assets/Images/addToCart@3x.png 3x">
+    </div>
+    <div class="price-number">
+      20.840.000 đ
+    </div>
+  </div>
+</div>

@@ -1,0 +1,57 @@
+@media screen and (min-width: 240px){
+  .container{
+    margin: 0 auto;
+    .columns{
+      padding: 0 !important;
+    }
+
+    .backImg:hover{
+      background-color:gray;
+    }
+    img{
+      max-width: 100%;
+    }
+    img.cart{
+      float: right;
+    }
+    .detail{
+      text-align: center;
+      width: 80%;
+      .name{
+        color: rgb(38, 40, 41);
+        font-size: 13pt;
+        line-height: 18pt;
+        letter-spacing: -0.2pt;
+        margin: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-family: SFProText-Semibold;
+      }
+      .sellPrice{
+        color: rgb(234, 52, 31);
+        font-size: 13pt;
+        line-height: 19pt;
+        letter-spacing: -0.14pt;
+        margin: 0;
+        font-family: SFProText-Semibold;
+      }
+    }
+
+  }
+}
+
+@media screen and (min-width: 320px){
+
+}
+
+@media screen and (min-width: 480px){
+
+}
+
+@media screen and (min-width: 768px){
+
+}
+
+@media screen and (min-width: 1024px){
+}

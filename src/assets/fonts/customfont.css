@@ -1,0 +1,8 @@
+@font-face {
+  font-family: SFProText-Regular;
+  src: url("/assets/fonts/SFProText-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: SFProText-Semibold;
+  src: url("/assets/fonts/SFProText-Semibold.otf") format("truetype");
+}
